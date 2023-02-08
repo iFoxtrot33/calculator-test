@@ -1,7 +1,23 @@
-# ![image](https://user-images.githubusercontent.com/102408798/217479774-9b521c01-8a70-4181-8ca8-74277a102428.png)Simple calculator
+# 🔢 Simple calculator
 
 ## ℹAbout:
 This is the test task for Byndyusoft
 
 ## 🌐Demo:
-https://sushi-delivery-store.vercel.app/
+https://basiccalculator-mu.vercel.app/
+
+## 💻To deploy localy:
+```
+1)git clone
+2)cd calculator-test
+3)make install
+4)npm start
+```
+## 🎛️Tests:
+<a href="https://codeclimate.com/github/iFoxtrot33/calculator-test/maintainability"><img src="https://api.codeclimate.com/v1/badges/b38ae459b157883981df/maintainability" /></a>
+
+## 🛠Stack:
+- ReactJS 18 
+- TypeScript
+- CSS
+- HTML
