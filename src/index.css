@@ -27,18 +27,22 @@ body {
   background-color: #ffffff;
   opacity: 0.2;
   border-radius: 18px;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 .calculator {
-  width: 100%;
-  height: 800px;
   width: 554px;
+  height: 800px;
   background: linear-gradient(#28518e, #3a77d1);
   border-radius: 18px;
   overflow: hidden;
   position: absolute;
+  box-shadow: 0px 3.713615894317627px 7.155503749847412px 0px
+      rgba(0, 0, 0, 0.1219),
+    0px 10.267672538757324px 19.7840518951416px 0px rgba(0, 0, 0, 0.175),
+    0px 24.720600128173828px 47.63237380981445px 0px rgba(0, 0, 0, 0.2281),
+    0px 82px 158px 0px rgba(0, 0, 0, 0.35);
 }
 
 .display {
@@ -48,18 +52,19 @@ body {
   font-size: 56px;
   line-height: 80px;
   font-weight: 700;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.35);
   width: 460px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 
 .display span {
   font-size: 24px;
   line-height: 32px;
   font-weight: 500;
+  padding-top: 80px;
 }
 
 button {
@@ -71,16 +76,21 @@ button {
   transition: 0.4s;
   background: inherit;
   color: #f2f2f2;
+  width: 100%;
+  height: 100%;
 }
 
 button:hover {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 50%;
+  width: 30px;
+  height: 30px;
 }
 
 .digits {
   display: flex;
   flex-wrap: wrap;
+  border-radius: 50%;
 }
 
 .digits button {
@@ -90,10 +100,14 @@ button:hover {
   line-height: 88px;
   margin: 20px;
   padding: 0;
+  width: 70px;
+  height: 70px;
 }
 
 .digits-equal {
   background-color: #ffffff;
   border-radius: 50%;
   color: #2b589a;
+  width: 70px;
+  height: 70px;
 }
