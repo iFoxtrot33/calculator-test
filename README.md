@@ -10,7 +10,7 @@ https://basiccalculator-mu.vercel.app/
 ```
 1)git clone
 2)cd calculator-test
-3)make install
+3)npm ci
 4)npm start
 ```
 ## 🎛️Tests:
