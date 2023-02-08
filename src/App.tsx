@@ -14,12 +14,39 @@ const App: React.FC = () => {
     ) {
       return;
     }
-    setCalc((prev) => prev + value);
 
-    if (operators.includes(value)) {
-      try {
-        setResult(evaluate(calc).toString());
-      } catch (error) {
+    let newCalc = calc;
+    try {
+      switch (value) {
+        case "%":
+          newCalc = `${evaluate(calc)}/100`;
+          break;
+        case ",":
+          newCalc = `${calc}.`;
+          break;
+        case "√":
+          newCalc = `${Math.sqrt(evaluate(calc))}`;
+          break;
+        default:
+          newCalc = calc + value;
+          break;
+      }
+
+      if (
+        !operators.includes(value) ||
+        (operators.includes(value) && value !== "=")
+      ) {
+        setCalc(newCalc);
+      } else {
+        const result = evaluate(newCalc);
+        setResult(result.toString());
+        setCalc("");
+      }
+    } catch (error) {
+      if (
+        !operators.includes(value) ||
+        (operators.includes(value) && value !== "=")
+      ) {
         setResult("Error");
       }
     }
@@ -40,8 +67,8 @@ const App: React.FC = () => {
       <div className="wrapper"> </div>
       <div className="calculator">
         <div className="display">
-          {calc || "0"}
-          {result ? <span>{result}</span> : ""}
+          <span>{calc || "0"}</span>
+          {result ? <div>{result}</div> : ""}
         </div>
         <div className="digits">
           <button onClick={onClickDelete}>C</button>
