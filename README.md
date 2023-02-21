@@ -8,7 +8,7 @@ https://basiccalculator-mu.vercel.app/
 
 ## 💻To deploy localy:
 ```
-1)git clone
+1)git clone https://github.com/iFoxtrot33/calculator-test.git
 2)cd calculator-test
 3)npm ci
 4)npm start
